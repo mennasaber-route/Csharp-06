@@ -67,6 +67,24 @@ namespace Assignment_5
 
             #endregion
 
+
+            #region Question8
+            ////8-Given string genreText = "Mystery"; (not a valid Genre value), use
+            ////Enum.TryParse() to attempt the conversion. Print "Unknown genre" if it  fails.
+
+
+            //string genreText = "Mystery";
+            //Genre genreValue;
+            //if (Enum.TryParse(genreText, out genreValue))
+            //{
+            //    Console.WriteLine(genreValue);
+            //}
+            //else
+            //{
+            //    Console.WriteLine("Unknown genre");
+            //}
+
+            #endregion
         }
     }
 }
