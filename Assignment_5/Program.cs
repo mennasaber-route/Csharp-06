@@ -87,37 +87,201 @@ namespace Assignment_5
 
             #endregion
 
-        }
-            // ***********   Part 1 from assignment 6  OOP 01    **********
-            //                 Part 01 : Theoretical Questions
 
 
-            #region Question1
-            //a) What happens when a DeliveryAddress variable is copied into another variable and the copy is modified ?
+            //           Part 02 — Practical Questions        //
 
-            //DeliveryAddress is a struct, so it is a value type.When it is copied, 
-            // a copy of its data is created and Modifying the copied variable does not affect
-            //the original variable.
+            #region Part 02 — Practical Questions
 
-            //                         -----------------//
-            //b) What happens when a Customer variable is copied into another variable and one variable modifies the object
 
-            //     Customer is a class, so it is a reference type.Copying the variable copies the reference to the same object.Therefore,
-            //     modifying the object through one variable affects the other variable
+            Console.WriteLine("===== Smart Delivery Management System =====");
+            Console.WriteLine();
 
+            Console.WriteLine("===== Enter Shipment 1 =====");
+
+            Console.Write("Enter Tracking Code: ");
+            string trackingCode1 = Console.ReadLine();
+
+            Console.Write("Enter Description: ");
+            string description1 = Console.ReadLine();
+
+            Console.Write("Enter Weight: ");
+            double weight1 = double.Parse(Console.ReadLine());
+
+            Console.Write("Enter Delivery Fee: ");
+            decimal deliveryFee1 = decimal.Parse(Console.ReadLine());
+
+            Console.WriteLine("Enter Destination:");
+
+            Console.Write("City: ");
+            string city1 = Console.ReadLine();
+
+            Console.Write("Street: ");
+            string street1 = Console.ReadLine();
+
+            Console.Write("Building Number: ");
+            int buildingNumber1 = int.Parse(Console.ReadLine());
+
+
+            DeliveryAddress address1 =
+                new DeliveryAddress(city1, street1, buildingNumber1);
+
+
+            Shipment shipment1 =
+                new Shipment(
+                    trackingCode1,
+                    description1,
+                    weight1,
+                    deliveryFee1,
+                    address1);
+
+            Console.WriteLine();
+            Console.WriteLine("===== Enter Shipment 2 =====");
+
+            Console.Write("Enter Tracking Code: ");
+            string trackingCode2 = Console.ReadLine();
+
+            Console.Write("Enter Description: ");
+            string description2 = Console.ReadLine();
+
+            Console.Write("Enter Weight: ");
+            double weight2 = double.Parse(Console.ReadLine());
+
+            Console.Write("Enter Delivery Fee: ");
+            decimal deliveryFee2 = decimal.Parse(Console.ReadLine());
+
+            Console.WriteLine("Enter Destination:");
+
+            Console.Write("City: ");
+            string city2 = Console.ReadLine();
+
+            Console.Write("Street: ");
+            string street2 = Console.ReadLine();
+
+            Console.Write("Building Number: ");
+            int buildingNumber2 = int.Parse(Console.ReadLine());
+
+
+            DeliveryAddress address2 =
+                new DeliveryAddress(city2, street2, buildingNumber2);
+
+
+            Shipment shipment2 =
+                new Shipment(
+                    trackingCode2,
+                    description2,
+                    weight2,
+                    deliveryFee2,
+                    address2);
+
+            Console.WriteLine();
+            Console.WriteLine("===== Enter Shipment 3 =====");
+
+            Console.Write("Enter Tracking Code: ");
+            string trackingCode3 = Console.ReadLine();
+
+            Console.Write("Enter Description: ");
+            string description3 = Console.ReadLine();
+
+            Console.Write("Enter Weight: ");
+            double weight3 = double.Parse(Console.ReadLine());
+
+            Console.Write("Enter Delivery Fee: ");
+            decimal deliveryFee3 = decimal.Parse(Console.ReadLine());
+
+            Console.WriteLine("Enter Destination:");
+
+            Console.Write("City: ");
+            string city3 = Console.ReadLine();
+
+            Console.Write("Street: ");
+            string street3 = Console.ReadLine();
+
+            Console.Write("Building Number: ");
+            int buildingNumber3 = int.Parse(Console.ReadLine());
+
+
+            DeliveryAddress address3 =
+                new DeliveryAddress(city3, street3, buildingNumber3);
+
+
+            Shipment shipment3 =
+                new Shipment(
+                    trackingCode3,
+                    description3,
+                    weight3,
+                    deliveryFee3,
+                    address3);
+
+            Console.WriteLine();
+            Console.WriteLine("========== Shipment 1 ==========");
+
+            shipment1.PrintShipment();
+
+
+            Console.WriteLine();
+            Console.WriteLine("========== Shipment 2 ==========");
+
+            shipment2.PrintShipment();
+
+
+            Console.WriteLine();
+            Console.WriteLine("========== Shipment 3 ==========");
+
+            shipment3.PrintShipment();
+
+            Console.WriteLine();
+            Console.WriteLine("===== DeliveryAddress Copy Test =====");
+
+            DeliveryAddress originalAddress =
+                new DeliveryAddress("Cairo", "Nasr Street", 10);
+
+            DeliveryAddress copiedAddress =
+                originalAddress;
+
+
+            copiedAddress.SetCity("Giza");
+            copiedAddress.SetStreet("Haram Street");
+            copiedAddress.SetBuildingNumber(20);
+
+            Console.WriteLine(
+                $"Original Address: {originalAddress.GetFullAddress()}");
+
+            Console.WriteLine(
+                $"Copied Address: {copiedAddress.GetFullAddress()}");
 
             #endregion
+        }
+        // ***********   Part 1 from assignment 6  OOP 01    **********
+        //                 Part 01 : Theoretical Questions
 
 
-            #region Question2
-            //a) a) Identify at least three problems with this design from an encapsulation perspective.
+        #region Question1
+        //a) What happens when a DeliveryAddress variable is copied into another variable and the copy is modified ?
 
-            //1 — الـfields public  ex  shipment.Weight = -100;
-            //2 - مفيش Validation      ex   shipment.DeliveryFee = -500;
-            //3 -  فأي كود يقدر يقرأ ويعدل كل حاجة بحرية مفيش تحكم في القراءة والكتابة
+        //DeliveryAddress is a struct, so it is a value type.When it is copied, 
+        // a copy of its data is created and Modifying the copied variable does not affect
+        //the original variable.
+
+        //                         -----------------//
+        //b) What happens when a Customer variable is copied into another variable and one variable modifies the object
+
+        //     Customer is a class, so it is a reference type.Copying the variable copies the reference to the same object.Therefore,
+        //     modifying the object through one variable affects the other variable
 
 
-            //b) b) How can private fields and public properties improve this design?
+        #endregion
+
+
+        #region Question2
+        //a) a) Identify at least three problems with this design from an encapsulation perspective.
+
+        //1 — الـfields public  ex  shipment.Weight = -100;
+        //2 - مفيش Validation      ex   shipment.DeliveryFee = -500;
+        //3 -  فأي كود يقدر يقرأ ويعدل كل حاجة بحرية مفيش تحكم في القراءة والكتابة
+
+
+        //b) b) How can private fields and public properties improve this design?
 
         //private double _weight;
         //public double Weight
@@ -134,9 +298,26 @@ namespace Assignment_5
         //        }
         //    }
         //}
-            #endregion
 
-            
+
+        // or 
+        //public struct Shipment
+        //{
+        //    private double _weight;
+        //    public double GetWeight()
+        //    {
+        //        return _weight;
+        //    }
+        //    public void SetWeight(double weight)
+        //    {
+        //        if (weight > 0)
+        //        {
+        //            _weight = weight;
+        //        }
+        //    }
+        //}
+
+        #endregion
 
     }
 }
