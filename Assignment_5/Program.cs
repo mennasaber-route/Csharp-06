@@ -94,24 +94,25 @@ namespace Assignment_5
             #region Part 02 — Practical Questions
 
 
-            Console.WriteLine("===== Smart Delivery Management System =====");
-            Console.WriteLine();
+            //Console.WriteLine("===== Smart Delivery Management System =====");
+            //Console.WriteLine();
 
-            Console.WriteLine("===== Enter Shipment 1 =====");
+            Console.WriteLine("Enter Shipment 1");
+            //string Shipment1 = Console.ReadLine();
 
-            Console.Write("Enter Tracking Code: ");
+            Console.Write(" Tracking Code: ");
             string trackingCode1 = Console.ReadLine();
 
-            Console.Write("Enter Description: ");
+            Console.Write(" Description: ");
             string description1 = Console.ReadLine();
 
-            Console.Write("Enter Weight: ");
+            Console.Write(" Weight: ");
             double weight1 = double.Parse(Console.ReadLine());
 
-            Console.Write("Enter Delivery Fee: ");
+            Console.Write(" Delivery Fee: ");
             decimal deliveryFee1 = decimal.Parse(Console.ReadLine());
 
-            Console.WriteLine("Enter Destination:");
+            //Console.WriteLine(" Destination:");
 
             Console.Write("City: ");
             string city1 = Console.ReadLine();
@@ -136,21 +137,21 @@ namespace Assignment_5
                     address1);
 
             Console.WriteLine();
-            Console.WriteLine("===== Enter Shipment 2 =====");
+            Console.WriteLine("Enter Shipment 2");
 
-            Console.Write("Enter Tracking Code: ");
+            Console.Write(" Tracking Code: ");
             string trackingCode2 = Console.ReadLine();
 
-            Console.Write("Enter Description: ");
+            Console.Write(" Description: ");
             string description2 = Console.ReadLine();
 
-            Console.Write("Enter Weight: ");
+            Console.Write(" Weight: ");
             double weight2 = double.Parse(Console.ReadLine());
 
-            Console.Write("Enter Delivery Fee: ");
+            Console.Write(" Delivery Fee: ");
             decimal deliveryFee2 = decimal.Parse(Console.ReadLine());
 
-            Console.WriteLine("Enter Destination:");
+            //Console.WriteLine("Enter Destination:");
 
             Console.Write("City: ");
             string city2 = Console.ReadLine();
@@ -175,21 +176,21 @@ namespace Assignment_5
                     address2);
 
             Console.WriteLine();
-            Console.WriteLine("===== Enter Shipment 3 =====");
+            Console.WriteLine("Enter Shipment 3");
 
-            Console.Write("Enter Tracking Code: ");
+            Console.Write(" Tracking Code: ");
             string trackingCode3 = Console.ReadLine();
 
-            Console.Write("Enter Description: ");
+            Console.Write(" Description: ");
             string description3 = Console.ReadLine();
 
-            Console.Write("Enter Weight: ");
+            Console.Write(" Weight: ");
             double weight3 = double.Parse(Console.ReadLine());
 
-            Console.Write("Enter Delivery Fee: ");
+            Console.Write(" Delivery Fee: ");
             decimal deliveryFee3 = decimal.Parse(Console.ReadLine());
 
-            Console.WriteLine("Enter Destination:");
+            //Console.WriteLine(" Destination:");
 
             Console.Write("City: ");
             string city3 = Console.ReadLine();
@@ -214,24 +215,24 @@ namespace Assignment_5
                     address3);
 
             Console.WriteLine();
-            Console.WriteLine("========== Shipment 1 ==========");
+            Console.WriteLine("Shipment 1");
 
             shipment1.PrintShipment();
 
 
             Console.WriteLine();
-            Console.WriteLine("========== Shipment 2 ==========");
+            Console.WriteLine("Shipment 2");
 
             shipment2.PrintShipment();
 
 
             Console.WriteLine();
-            Console.WriteLine("========== Shipment 3 ==========");
+            Console.WriteLine("Shipment 3");
 
             shipment3.PrintShipment();
 
             Console.WriteLine();
-            Console.WriteLine("===== DeliveryAddress Copy Test =====");
+            Console.WriteLine(" DeliveryAddress Copy Test");
 
             DeliveryAddress originalAddress =
                 new DeliveryAddress("Cairo", "Nasr Street", 10);
@@ -251,6 +252,7 @@ namespace Assignment_5
                 $"Copied Address: {copiedAddress.GetFullAddress()}");
 
             #endregion
+
         }
         // ***********   Part 1 from assignment 6  OOP 01    **********
         //                 Part 01 : Theoretical Questions

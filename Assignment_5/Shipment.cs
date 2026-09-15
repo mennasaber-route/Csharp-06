@@ -12,22 +12,17 @@ namespace Assignment_5
         private decimal _deliveryFee;
 
         private DeliveryAddress _destination;
-
-
-        // TrackingCode - Getter only
+   
         public string GetTrackingCode()
         {
             return _trackingCode;
         }
-
-
-        // Description - Getter
+    
         public string GetDescription()
         {
             return _description;
         }
 
-        // Description - Setter
         public void SetDescription(string description)
         {
             if (!string.IsNullOrWhiteSpace(description))
@@ -36,14 +31,11 @@ namespace Assignment_5
             }
         }
 
-
-        // Weight - Getter
         public double GetWeight()
         {
             return _weight;
         }
 
-        // Weight - Setter
         public void SetWeight(double weight)
         {
             if (weight > 0)
@@ -52,14 +44,11 @@ namespace Assignment_5
             }
         }
 
-
-        // DeliveryFee - Getter
         public decimal GetDeliveryFee()
         {
             return _deliveryFee;
         }
 
-        // DeliveryFee - Private Setter
         private void SetDeliveryFee(decimal deliveryFee)
         {
             if (deliveryFee > 0)
@@ -68,28 +57,20 @@ namespace Assignment_5
             }
         }
 
-
-        // Destination - Getter
         public DeliveryAddress GetDestination()
         {
             return _destination;
         }
 
-        // Destination - Setter
         public void SetDestination(DeliveryAddress destination)
         {
             _destination = destination;
         }
-
-
-        // EstimatedCost - Getter
         public decimal GetEstimatedCost()
         {
             return _deliveryFee + ((decimal)_weight * 5);
         }
 
-
-        // Constructor 1
         public Shipment(string trackingCode)
         {
             _trackingCode = trackingCode;
@@ -101,9 +82,6 @@ namespace Assignment_5
             _destination =
                 new DeliveryAddress("Unknown", "Unknown", 0);
         }
-
-
-        // Constructor 2
         public Shipment(
             string trackingCode,
             string description,
@@ -134,8 +112,6 @@ namespace Assignment_5
             _destination = destination;
         }
 
-
-        // Update Delivery Fee
         public void UpdateDeliveryFee(decimal newFee)
         {
             if (newFee > 0)
@@ -144,8 +120,6 @@ namespace Assignment_5
             }
         }
 
-
-        // Print Shipment
         public void PrintShipment()
         {
             Console.WriteLine($"Tracking Code: {GetTrackingCode()}");
