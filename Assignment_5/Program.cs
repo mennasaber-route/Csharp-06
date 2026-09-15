@@ -6,16 +6,17 @@ namespace Assignment_5
     internal class Program
     {
 
-        enum Genre { 
-            Fiction, 
-            NonFiction, 
-            Science 
+        enum Genre
+        {
+            Fiction,
+            NonFiction,
+            Science
         }
 
 
         class Book
         {
-         public Genre Genre { get; set; }
+            public Genre Genre { get; set; }
         }
 
         static void Main(string[] args)
@@ -86,7 +87,7 @@ namespace Assignment_5
 
             #endregion
 
-
+        }
             // ***********   Part 1 from assignment 6  OOP 01    **********
             //                 Part 01 : Theoretical Questions
 
@@ -106,6 +107,37 @@ namespace Assignment_5
 
 
             #endregion
-        }
+
+
+            #region Question2
+            //a) a) Identify at least three problems with this design from an encapsulation perspective.
+
+            //1 — الـfields public  ex  shipment.Weight = -100;
+            //2 - مفيش Validation      ex   shipment.DeliveryFee = -500;
+            //3 -  فأي كود يقدر يقرأ ويعدل كل حاجة بحرية مفيش تحكم في القراءة والكتابة
+
+
+            //b) b) How can private fields and public properties improve this design?
+
+        //private double _weight;
+        //public double Weight
+        //{
+        //    get
+        //    {
+        //        return _weight;
+        //    }
+        //    set
+        //    {
+        //        if (value > 0)
+        //        {
+        //            _weight = value;
+        //        }
+        //    }
+        //}
+            #endregion
+
+            
+
+    }
 }
-}
+
