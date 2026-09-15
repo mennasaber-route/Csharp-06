@@ -85,6 +85,27 @@ namespace Assignment_5
             //}
 
             #endregion
+
+
+            // ***********   Part 1 from assignment 6  OOP 01    **********
+            //                 Part 01 : Theoretical Questions
+
+
+            #region Question1
+            //a) What happens when a DeliveryAddress variable is copied into another variable and the copy is modified ?
+
+            //DeliveryAddress is a struct, so it is a value type.When it is copied, 
+            // a copy of its data is created and Modifying the copied variable does not affect
+            //the original variable.
+
+            //                         -----------------//
+            //b) What happens when a Customer variable is copied into another variable and one variable modifies the object
+
+            //     Customer is a class, so it is a reference type.Copying the variable copies the reference to the same object.Therefore,
+            //     modifying the object through one variable affects the other variable
+
+
+            #endregion
         }
-    }
+}
 }
